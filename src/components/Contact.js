@@ -9,6 +9,25 @@ export default function Contact() {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const form = e.target;
+    const formData = new FormData(form);
+
+    const email = formData.get("email");
+    const message = formData.get("message");
+
+    const hiddenForm = document.forms["contact"];
+
+    hiddenForm.elements["email"].value = email;
+    hiddenForm.elements["message"].value = message;
+
+    hiddenForm.submit();
+
+    handleClose();
+  };
+
   return (
     <>
       <Button variant="secondary" onClick={handleShow}>
@@ -20,47 +39,45 @@ export default function Contact() {
           <Modal.Title>Contact Me</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <form>
+          <form onSubmit={handleSubmit}>
             <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
               <Form.Label>Email address</Form.Label>
               <Form.Control
                 type="email"
                 placeholder="example@email.com"
                 autoFocus
+                id="email"
               />
             </Form.Group>
-            <Form.Group
-              className="mb-3"
-              controlId="exampleForm.ControlTextarea1"
-            >
+            <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
               <Form.Label>Message</Form.Label>
-              <Form.Control as="textarea" rows={3} />
+              <Form.Control as="textarea" rows={3} id="message" />
             </Form.Group>
+            <Button variant="primary" type="submit">
+              Send
+            </Button>
           </form>
-          <p>
+          
             <ul className="list-unstyled">
               <li>
                 <i className="fas fa-phone"></i> (818) 337-9688
               </li>
               <li>
-                <i className="fab fa-linkedin"></i>{' '}
+                <i className="fab fa-linkedin"></i>{" "}
                 <a
-                  href="https://www.linkedin.com/in/your-linkedin-profile"
+                  href="https://www.linkedin.com/in/habib-maksoud-87aa2a253/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  My linkedin
+                  My LinkedIn
                 </a>
               </li>
             </ul>
-          </p>
+          
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>
             Close
-          </Button>
-          <Button variant="primary" onClick={handleClose}>
-            Send
           </Button>
         </Modal.Footer>
       </Modal>

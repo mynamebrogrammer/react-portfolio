@@ -1,0 +1,55 @@
+:root {
+  --primary-color: rgb(85, 156, 132);
+  --secondary-color: #282c34;
+  --gradient-animation-duration: 10s;
+}
+
+.btn {
+  background-color: #000000;
+  border-color: #000000;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 10px 20px;
+  margin: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.offcanvas-header {
+  background: linear-gradient(
+    135deg,
+    var(--primary-color),
+    lightblue,
+    var(--secondary-color)
+  );
+  background-size: 300% 300%;
+  animation: gradientAnimation var(--gradient-animation-duration) linear
+    infinite;
+}
+
+.offcanvas-body {
+  background: linear-gradient(
+    135deg,
+    var(--primary-color),
+    lightblue,
+    var(--secondary-color)
+  );
+  background-size: 300% 300%;
+  animation: gradientAnimation var(--gradient-animation-duration) linear
+    infinite;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+

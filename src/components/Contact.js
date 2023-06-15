@@ -41,6 +41,11 @@ export default function Contact() {
         <Modal.Body>
           <form onSubmit={handleSubmit}>
             <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+                <Form.Label>Name</Form.Label>
+                <Form.Control type="text" placeholder="John Doe" id="name" />
+            </Form.Group>
+            <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+
               <Form.Label>Email address</Form.Label>
               <Form.Control
                 type="email"

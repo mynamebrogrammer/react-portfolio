@@ -15,11 +15,16 @@ export default function Contact() {
     const form = e.target;
     const formData = new FormData(form);
 
+    const name = formData.get("name");
     const email = formData.get("email");
     const message = formData.get("message");
 
+    console.log(name, email, message);
+
+
     const hiddenForm = document.forms["contact"];
 
+    hiddenForm.elements["name"].value = name;
     hiddenForm.elements["email"].value = email;
     hiddenForm.elements["message"].value = message;
 
@@ -42,21 +47,19 @@ export default function Contact() {
           <form onSubmit={handleSubmit}>
             <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
                 <Form.Label>Name</Form.Label>
-                <Form.Control type="text" placeholder="John Doe" id="name" />
+                <Form.Control type="text" placeholder="John Doe" />
             </Form.Group>
             <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-
               <Form.Label>Email address</Form.Label>
               <Form.Control
                 type="email"
                 placeholder="example@email.com"
                 autoFocus
-                id="email"
               />
             </Form.Group>
             <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
               <Form.Label>Message</Form.Label>
-              <Form.Control as="textarea" rows={3} id="message" />
+              <Form.Control as="textarea" rows={3} />
             </Form.Group>
             <Button variant="primary" type="submit">
               Send

@@ -8,7 +8,7 @@ import "../contact.css"
 export default function Contact() {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
+  // const handleShow = () => setShow(true);
 
   const handleSubmit = (e) => {
     e.preventDefault();

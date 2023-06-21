@@ -1,6 +1,35 @@
-.section .profile-pic{
-    height: 450px;
-    width: auto;
+
+
+@media screen and (max-width: 800px) {
+    .section .profile-pic{
+        height: 300px;
+        width: auto;
+        border-radius: 10px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .section .profile-pic{
+        height: 200px;
+        width: auto;
+        border-radius: 10px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .section .profile-pic{
+        height: 150px;
+        width: auto;
+        border-radius: 10px;
+    }
+}
+
+.section .profile-pic:hover{
+    box-shadow: 0 0 10px #ccc;
+}
+
+.section .profile-pic {
+    height: 100%;
+    width: 100%;
     border-radius: 10px;
-    
 }

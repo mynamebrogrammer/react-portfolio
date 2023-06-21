@@ -4,6 +4,8 @@ import Button from "react-bootstrap/Button";
 import simpliGame from "../assets/screenshot-1.png";
 import tech from "../assets/tech.png";
 import deli from "../assets/deli.png";
+import book from "../assets/book.png";
+import metal from "../assets/metal.png";
 import "../projects.css";
 
 export default function Projects() {
@@ -37,21 +39,21 @@ export default function Projects() {
     },
     {
       id: 3,
-      title: "Burbank Deli & Market",
+      title: "Book Search Engine",
       description:
-        "This is a website for a local deli and market in Burbank, CA. The website is built using React and Bootstrap.",
-      image: deli,
-      demoLink: "https://www.burbankdeli.com/",
-      githubLink: "https://github.com/mynamebrogrammer/BurbankDeliMarket",
+        "This is a MERN stack application that allows users to search for books using the Google Books API. Users can create an account, login, and save books to their profile. Users can also delete books from their profile.",
+      image: book,
+      demoLink: "https://peaceful-coast-53838.herokuapp.com/",
+      githubLink: "https://github.com/mynamebrogrammer/book-search-engine",
     },
     {
       id: 3,
-      title: "Burbank Deli & Market",
+      title: "MetalMindz",
       description:
-        "This is a website for a local deli and market in Burbank, CA. The website is built using React and Bootstrap.",
-      image: deli,
-      demoLink: "https://www.burbankdeli.com/",
-      githubLink: "https://github.com/mynamebrogrammer/BurbankDeliMarket",
+        "MetalMindz is a social app for FRC robot builders. Show off your creations, connect with others, and get inspired. Simply create a profile, upload photos of your robots, and join a community of like-minded enthusiasts.",
+      image: metal,
+      demoLink: "https://metal-mindz.herokuapp.com/",
+      githubLink: "https://github.com/mynamebrogrammer/MetalMindz",
     },
   ];
 

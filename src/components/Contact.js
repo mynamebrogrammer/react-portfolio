@@ -38,9 +38,9 @@ export default function Contact() {
   return (
     <>
     {/* add contact in hamburger */}
-      <Button variant="secondary" onClick={handleShow}>
+      {/* <Button variant="secondary" onClick={handleShow}>
         Contact Me
-      </Button>
+      </Button> */}
 
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>

@@ -10,10 +10,11 @@ export default function Navbar() {
 
   return (
     <>
-      <Button variant="secondary" onClick={handleShow}>
+    {/* add hambuger instead of accordion */}
+      {/* <Button variant="secondary" onClick={handleShow}>
         More Info
         <i className="fas fa-bars"></i>
-      </Button>
+      </Button> */}
       <Offcanvas show={show} onHide={handleClose} placement="top">
         <Offcanvas.Header closeButton>
           <Offcanvas.Title>Check Me Out!</Offcanvas.Title>
@@ -31,8 +32,8 @@ export default function Navbar() {
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#skills" onClick={handleClose}>
-                Skills
+              <a className="nav-link" href="#project" onClick={handleClose}>
+                project
               </a>
             </li>
             

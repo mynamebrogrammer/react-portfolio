@@ -3,6 +3,7 @@ import { useState } from "react";
 import { Button } from "react-bootstrap";
 import Modal from "react-bootstrap/Modal";
 import Form from "react-bootstrap/Form";
+import "../contact.css"
 
 export default function Contact() {
   const [show, setShow] = useState(false);
@@ -19,8 +20,9 @@ export default function Contact() {
     const email = formData.get("email");
     const message = formData.get("message");
 
-    console.log(name, email, message);
-
+    console.log("name: ", name);
+    console.log("email: ", email);
+    console.log("message: ", message);
 
     const hiddenForm = document.forms["contact"];
 
@@ -35,6 +37,7 @@ export default function Contact() {
 
   return (
     <>
+    {/* add contact in hamburger */}
       <Button variant="secondary" onClick={handleShow}>
         Contact Me
       </Button>
@@ -46,42 +49,47 @@ export default function Contact() {
         <Modal.Body>
           <form onSubmit={handleSubmit}>
             <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-                <Form.Label>Name</Form.Label>
-                <Form.Control type="text" placeholder="John Doe" />
+              <Form.Label>Name</Form.Label>
+              <Form.Control 
+              type="text" 
+              placeholder="John Doe" 
+              name="name" />
             </Form.Group>
-            <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+            <Form.Group className="mb-3" controlId="exampleForm.ControlInput2">
               <Form.Label>Email address</Form.Label>
               <Form.Control
                 type="email"
                 placeholder="example@email.com"
                 autoFocus
+                name="email"
               />
             </Form.Group>
-            <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
+            <Form.Group
+              className="mb-3"
+              controlId="exampleForm.ControlTextarea1"
+            >
               <Form.Label>Message</Form.Label>
-              <Form.Control as="textarea" rows={3} />
+              <Form.Control as="textarea" rows={3} name="message" />
             </Form.Group>
-            <Button variant="primary" type="submit">
+            <Button variant="secondary" type="submit">
               Send
             </Button>
           </form>
-          
-            <ul className="list-unstyled">
-              <li>
-                <i className="fas fa-phone"></i> (818) 337-9688
-              </li>
-              <li>
-                <i className="fab fa-linkedin"></i>{" "}
-                <a
-                  href="https://www.linkedin.com/in/habib-maksoud-87aa2a253/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  My LinkedIn
-                </a>
-              </li>
-            </ul>
-          
+          <ul className="list-unstyled">
+            <li>
+              <i className="fas fa-phone"></i> (818) 337-9688
+            </li>
+            <li>
+              <i className="fab fa-linkedin"></i>{" "}
+              <a
+                href="https://www.linkedin.com/in/habib-maksoud-87aa2a253/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                My LinkedIn
+              </a>
+            </li>
+          </ul>
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>

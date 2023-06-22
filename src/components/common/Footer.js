@@ -12,7 +12,6 @@ export default function Footer() {
               <span className="text-warning font-weight-normal">
                 Habib Maksoud
               </span>
-              , using <i className="fab fa-react" /> React JS &amp; Redux JS
             </div>
           </div>
         </div>

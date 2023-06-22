@@ -20,10 +20,6 @@ export default function Contact() {
     const email = formData.get("email");
     const message = formData.get("message");
 
-    console.log("name: ", name);
-    console.log("email: ", email);
-    console.log("message: ", message);
-
     const hiddenForm = document.forms["contact"];
 
     hiddenForm.elements["name"].value = name;
@@ -87,9 +83,7 @@ export default function Contact() {
             </li>
           </ul>
         </Modal.Body>
-        <Modal.Footer>
-          Lets get in touch!
-        </Modal.Footer>
+        <Modal.Footer>Lets get in touch!</Modal.Footer>
       </Modal>
     </>
   );

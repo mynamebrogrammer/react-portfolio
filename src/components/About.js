@@ -1,22 +1,38 @@
-import React from "react";
-import { Container, Row, Col, Image } from "react-bootstrap";
+import React, { useState } from "react";
+import { Container, Row, Col } from "react-bootstrap";
 import Contact from "./Contact";
-import profilePic from "../../src/assets/IMG_0676.jpg";
+import profilePicFront from "../../src/assets/IMG_0676.jpg";
 import resumePDF from "../../src/assets/resume-web.pdf";
 import "../about.css";
 
 export default function About() {
+  const [isFlipped, setIsFlipped] = useState(false);
+
+  const flipProfilePic = () => {
+    setIsFlipped(!isFlipped);
+  };
+
   return (
     <section id="about" className="py-5 section">
       <Container>
         <Row className="align-items-center">
           <Col xs={4}>
-            <Image
-              className="profile-pic"
-              src={profilePic}
-              alt="Profile Picture"
-              fluid
-            />
+            <div
+              className={`profile-pic ${isFlipped ? "flipped" : ""}`}
+              onClick={flipProfilePic}
+            >
+              <div className="profile-pic-front">
+                <img src={profilePicFront} alt="Profile" />
+              </div>
+              <div className="profile-pic-back">
+                <div className="back-content">
+                  <h3>BONUS!</h3>
+                  <p>Birthday: January 30, 1999</p>
+                  <p>Favorite Food: Margarita style Pizza</p>
+                  <p>Favorite Car: 2016 BMW M5</p>
+                </div>
+              </div>
+            </div>
           </Col>
           <Col xs={8}>
             <h2 className="mb-4">About Me</h2>

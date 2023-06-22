@@ -21,6 +21,10 @@
   width: auto;
   height: auto;
   max-width: 100%;
+
+}
+.container {
+  font-family: 'Comic Neue', cursive;
   
 }
 

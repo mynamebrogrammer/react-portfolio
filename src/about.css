@@ -1,85 +1,76 @@
 .section .profile-pic {
-    position: relative;
-    perspective: 1000px;
-    height: 0;
-    padding-bottom: 100%;
-    border-radius: 10px;
-    cursor: pointer;
-   
-  }
-  
-  .profile-pic-front,
-  .profile-pic-back {
-    position: absolute;
-    top: 20px;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    transition: transform 0.5s;
-    border-radius: 10px;
-  }
-  
-  .profile-pic-front {
-    transform: rotateY(0deg);
-    border-radius: 10px;
-    
+  position: relative;
+  perspective: 1000px;
+  height: 0;
+  padding-bottom: 100%;
+  border-radius: 10px;
+  cursor: pointer;
+}
 
-  }
-  
-  .profile-pic-back {
-    transform: rotateY(180deg);
-    height: auto;
-   
-  }
-  
-  .profile-pic.flipped .profile-pic-front {
-    transform: rotateY(-180deg);
-    border-radius: 10px;
-  }
-  
-  .profile-pic.flipped .profile-pic-back {
-    transform: rotateY(0deg);
-    height: auto;
+.profile-pic-front,
+.profile-pic-back {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  transition: transform 0.5s;
+  border-radius: 10px;
+}
 
-    
-  }
-  
-  .profile-pic img {
-    width: 100%;
-    object-fit: cover;
-    border-radius: 10px;
+.profile-pic-front {
+  transform: rotateY(0deg);
+  border-radius: 10px;
+}
 
-  }
+.profile-pic-back {
+  transform: rotateY(180deg);
+  height: auto;
+}
 
-  .profile-pic {
-    bottom: 72px;
-  }
-  
-  .back-content {
-    padding: 20px;
-    background-color: #a7a2a2;
-    border-radius: 10px;
-    text-align: center;
-    height: 100%;
-  }
-  
-  .back-content h3 {
-    margin-bottom: 10px;
-    font-size: 2.1rem;
-  }
+.profile-pic.flipped .profile-pic-front {
+  transform: rotateY(-180deg);
+  border-radius: 10px;
+}
 
-  .back-content p {
-    font-size: 1.2rem;
-  }
-  
-  .container {
-    font-family: 'Comic Neue', cursive;
-    font-size: 1.2rem;
-  }
+.profile-pic.flipped .profile-pic-back {
+  transform: rotateY(0deg);
+  height: auto;
+}
 
-  .title {
-    text-align: center;
-    margin: 10px;
-    font-family: 'Comic Neue', cursive;
-  }
+.profile-pic img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.profile-pic {
+  bottom: 72px;
+}
+
+.back-content {
+  padding: 20px;
+  background-color: #a7a2a2;
+  border-radius: 10px;
+  text-align: center;
+  height: 100%;
+}
+
+.back-content h3 {
+  margin: 0;
+  font-family: "Comic Neue", cursive;
+}
+
+
+
+.container {
+  font-family: "Comic Neue", cursive;
+  font-size: 1.2rem;
+}
+
+.title {
+  text-align: center;
+  margin: 10px;
+  font-family: "Comic Neue", cursive;
+}

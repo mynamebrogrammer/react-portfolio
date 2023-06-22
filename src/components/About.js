@@ -30,8 +30,8 @@ export default function About() {
                   <p>Birthday: January 30, 1999</p>
                   <p>Favorite Food: Margarita style Pizza</p>
                   <p>Favorite Car: 2016 BMW M5</p>
-                  
-
+                  <p>Favorite Color: Blue</p>
+                  <p>Favorite Sport: Soccer</p>
                 </div>
               </div>
             </div>

@@ -3,12 +3,12 @@ import { useState } from "react";
 import { Button } from "react-bootstrap";
 import Modal from "react-bootstrap/Modal";
 import Form from "react-bootstrap/Form";
-import "../contact.css"
+import "../contact.css";
 
 export default function Contact() {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
-  // const handleShow = () => setShow(true);
+  const handleShow = () => setShow(true);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -37,10 +37,9 @@ export default function Contact() {
 
   return (
     <>
-    {/* add contact in hamburger */}
-      {/* <Button variant="secondary" onClick={handleShow}>
-        Contact Me
-      </Button> */}
+      <Button variant="secondary" onClick={handleShow}>
+        Contact Me Here!
+      </Button>
 
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
@@ -50,10 +49,7 @@ export default function Contact() {
           <form onSubmit={handleSubmit}>
             <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
               <Form.Label>Name</Form.Label>
-              <Form.Control 
-              type="text" 
-              placeholder="John Doe" 
-              name="name" />
+              <Form.Control type="text" placeholder="John Doe" name="name" />
             </Form.Group>
             <Form.Group className="mb-3" controlId="exampleForm.ControlInput2">
               <Form.Label>Email address</Form.Label>
@@ -86,15 +82,13 @@ export default function Contact() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                My LinkedIn
+                LinkedIn
               </a>
             </li>
           </ul>
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
-            Close
-          </Button>
+          Lets get in touch!
         </Modal.Footer>
       </Modal>
     </>

@@ -1,29 +1,30 @@
-.card {
-  display: flex;
-  flex-direction: row;
-  grid-gap: 10px;
-  margin: 0px;
-  padding: 10px;
-  width: 300px;
-  transition: 0.3s;
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300&display=swap');
+:root {
+  font-family: 'Comic Neue', cursive;
 }
-
-.card:hover {
-  box-shadow: 0 0 10px #ccc;
-}
-
-.card-img-top {
-    height: 145px;
-    
-}
-
+.carousel-caption {
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 100%;
+  font-family: 'Comic Neue', cursive;
+  padding: 15px;
+  color: white;
+  left: 0 !important;
+  
+ }
 .title {
   text-align: center;
 }
 
-.card-body {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  
+.carousel-item {
+  height: 600px;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.carousel-inner {
+  border-radius: 10px;
+}
+
+.project-title-desc {
+  text-align: center;
 }

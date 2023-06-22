@@ -1,5 +1,5 @@
 import React from "react";
-import Card from "react-bootstrap/Card";
+import Carousel from "react-bootstrap/Carousel";
 import Button from "react-bootstrap/Button";
 import simpliGame from "../assets/screenshot-1.png";
 import tech from "../assets/tech.png";
@@ -38,7 +38,7 @@ export default function Projects() {
       githubLink: "https://github.com/mynamebrogrammer/BurbankDeliMarket",
     },
     {
-      id: 3,
+      id: 4,
       title: "Book Search Engine",
       description:
         "This is a MERN stack application that allows users to search for books using the Google Books API. Users can create an account, login, and save books to their profile. Users can also delete books from their profile.",
@@ -47,7 +47,7 @@ export default function Projects() {
       githubLink: "https://github.com/mynamebrogrammer/book-search-engine",
     },
     {
-      id: 3,
+      id: 5,
       title: "MetalMindz",
       description:
         "MetalMindz is a social app for FRC robot builders. Show off your creations, connect with others, and get inspired. Simply create a profile, upload photos of your robots, and join a community of like-minded enthusiasts.",
@@ -61,33 +61,32 @@ export default function Projects() {
     <section id="projects">
       <div className="container">
         <h2 className="title">Projects</h2>
-        <div className="row">
+        <p className="project-title-desc">
+          The following are some of the projects I have worked on. 
+        </p>
+        <Carousel>
           {projects.map((project) => (
-            <div className="col-md-6 col-lg-4 mb-4" key={project.id}>
-              <Card>
-                <Card.Img variant="top" src={project.image} />
-                <Card.Body>
-                  <Card.Title>{project.title}</Card.Title>
-                  <Card.Text>{project.description}</Card.Text>
-                  <Button
-                    variant="secondary"
-                    href={project.demoLink}
-                    target="_blank"
-                  >
+            <Carousel.Item key={project.id}>
+              <img
+                className="d-block w-100"
+                src={project.image}
+                alt={project.title}
+              />
+              <Carousel.Caption>
+                <h3>{project.title}</h3>
+                <p>{project.description}</p>
+                <div className="carousel-buttons">
+                  <Button variant="secondary" href={project.demoLink} target="_blank">
                     Demo
                   </Button>
-                  <Button
-                    variant="secondary"
-                    href={project.githubLink}
-                    target="_blank"
-                  >
+                  <Button variant="secondary" href={project.githubLink} target="_blank">
                     GitHub
                   </Button>
-                </Card.Body>
-              </Card>
-            </div>
+                </div>
+              </Carousel.Caption>
+            </Carousel.Item>
           ))}
-        </div>
+        </Carousel>
       </div>
     </section>
   );

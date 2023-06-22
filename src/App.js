@@ -1,12 +1,12 @@
 import React from "react";
 import About from "./components/About";
-import Contact from "./components/Contact";
 import Navbar from "./components/Navbar";
 import Footer from "./components/common/Footer";
 import Header from "./components/common/Header";
 import Skills from "./components/Skills";
 import {useEffect} from 'react';
 import Projects from "./components/Projects";
+
 
 import './App.css';
 
@@ -22,7 +22,6 @@ function App() {
         <About />
         <Projects />
         <Skills />
-        <Contact />
         <Footer />
     </main>
 

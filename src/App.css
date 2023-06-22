@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300&display=swap');
 :root {
   --primary-color: rgb(47, 88, 75);
   --secondary-color: #282c34;
   --gradient-animation-duration: 10s;
+  font-family: 'Comic Neue', cursive;
 }
 
 .App {

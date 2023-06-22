@@ -1,5 +1,6 @@
 import React from "react";
 import { Container, Row, Col, Image } from "react-bootstrap";
+import Contact from "./Contact";
 import profilePic from "../../src/assets/IMG_0676.jpg";
 import "../about.css";
 
@@ -25,13 +26,16 @@ export default function About() {
               creating intuitive user interfaces that provide a great user
               experience. I also have experience with back-end development,
               working with Node.js and Express to build RESTful APIs and
-              integrate with databases. I am also familiar with relational and
-              non-relational databases.
+              integrate with databases.
             </p>
             <p>
               When I'm not coding, you can find me exploring new technologies,
-              playing soccer, or geeking out around cool cars.
+              playing soccer, or geeking out around cool cars. I am a big cooking enthusiast and love to try new recipes. I also enjoy traveling and exploring new places.
             </p>
+            <p>
+              I am currently looking for a full-time position as a web developer. If you have any questions or would like to get in touch, please feel free to contact me using the button below.
+            </p>
+            <Contact />
           </Col>
         </Row>
       </Container>

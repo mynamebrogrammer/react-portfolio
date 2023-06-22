@@ -26,7 +26,6 @@ export default function About() {
               </div>
               <div className="profile-pic-back">
                 <div className="back-content">
-                  <h3>BONUS!</h3>
                   <p>Birthday: January 30, 1999</p>
                   <p>Favorite Food: Margarita style Pizza</p>
                   <p>Favorite Car: 2016 BMW M5</p>

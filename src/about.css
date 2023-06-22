@@ -50,16 +50,21 @@
 }
 
 .back-content {
+  font-family: "Comic Neue", cursive;
+  font-size: 0.9rem;
   padding: 20px;
   background-color: #a7a2a2;
   border-radius: 10px;
   text-align: center;
+  
   height: 100%;
 }
 
 .back-content h3 {
-  margin: 0;
+  
   font-family: "Comic Neue", cursive;
+  font-size: 1.2rem;
+  text-align: center;
 }
 
 

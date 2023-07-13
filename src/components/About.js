@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import Contact from "./Contact";
 import profilePicFront from "../../src/assets/IMG_0676.jpg";
-import resumePDF from "../../src/assets/resume-web.pdf";
+import resumePDF from "../../src/assets/habib-maksoud-resume.pdf";
 import "../about.css";
 
 export default function About() {
